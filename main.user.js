@@ -12,6 +12,10 @@
 (function() {
     'use strict';
 
+	// Constants
+	const GITHUB_PROJECT = 'https://github.com/AstreusCoding/Steam-Currency-Converter';
+	const GITHUB_PROJECT_ISSUES = 'https://github.com/AstreusCoding/Steam-Currency-Converter/issues';
+	const GITHUB_DISCUSSIONS = 'https://github.com/AstreusCoding/Steam-Currency-Converter/discussions';
     const EURO_CONVERSION_RATE = 0.02136897;  // 1 UAH to EUR
     const DEFAULT_INTERVAL_SEC = 5;
     let checkIntervalMs = DEFAULT_INTERVAL_SEC * 1000;
@@ -90,16 +94,22 @@
         group2.className = 'group svelte-ozsup';
         const githubLink = document.createElement('a');
         githubLink.className = 'svelte-ozsup';
-        githubLink.href = 'https://github.com/IsThereAnyDeal/AugmentedSteam';
+        githubLink.href = GITHUB_PROJECT;
         githubLink.target = '_blank';
         githubLink.textContent = 'Contribute (GitHub)';
         group2.appendChild(githubLink);
         const reportLink = document.createElement('a');
         reportLink.className = 'svelte-ozsup';
-        reportLink.href = 'https://github.com/IsThereAnyDeal/AugmentedSteam/issues';
+        reportLink.href = GITHUB_PROJECT_ISSUES;
         reportLink.target = '_blank';
         reportLink.textContent = 'Report Bug / Suggest Feature';
         group2.appendChild(reportLink);
+        const discussionLink = document.createElement('a');
+        discussionLink.className = 'svelte-ozsup';
+        discussionLink.href = GITHUB_DISCUSSIONS;
+        discussionLink.target = '_blank';
+        discussionLink.textContent = 'Join the Discussion';
+        group2.appendChild(discussionLink);
         body.appendChild(group2);
 
         container.appendChild(body);
